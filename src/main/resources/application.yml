@@ -1,0 +1,20 @@
+spring:
+  security:
+    basic:
+      enabled: false
+  application:
+    name: user-service
+  r2dbc:
+    url: r2dbc:mssql://serverusers.database.windows.net:1433;database=databaseusers2;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: azureuser
+    password: Asd123456@
+    pool:
+      initial-size: 5
+      max-size: 20
+
+server:
+  port: 8081
+
+jwt:
+  secret: test-secret@@123
+  expiration: 86400
